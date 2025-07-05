@@ -1,9 +1,9 @@
 import React from "react";
-
+import "./style.css";
 const App = () => {
   return (
     <div>
-      <h2>Hello React</h2>
+      <header className="heading">Deeps To Do List</header>
     </div>
   );
 };
