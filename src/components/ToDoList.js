@@ -13,11 +13,28 @@ const ToDoList = () => {
     setNewtask(e.target.value);
   }
 
-  function addtask() {}
+  function addtask() {
+    if (newTask.trim() !== "") {
+      setTasks((t) => [...t, newTask]);
+      setNewtask("");
+    }
+  }
 
-  function deleteTask() {}
+  function deleteTask(index) {
+    const updatedTask = tasks.filter((element, i) => i !== index);
+    setTasks(updatedTask);
+  }
 
-  function moveTaskUp() {}
+  function moveTaskUp(index) {
+    if (index > 0) {
+      const updatedTask = [...tasks];
+      [updatedTask[index], updatedTask[index - 1]] = [
+        updatedTask[index - 1],
+        updatedTask[index],
+      ];
+      setTasks(updatedTask);
+    }
+  }
 
   function moveTaskDown() {}
 

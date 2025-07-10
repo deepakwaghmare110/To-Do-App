@@ -21,6 +21,7 @@ button {
 
 .add-button {
   background-color: rgb(29, 220, 29);
+  margin-left: 5px;
 }
 
 .add-button:hover {
