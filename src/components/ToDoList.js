@@ -1,5 +1,5 @@
 import { useState } from "react";
-
+import "../style.css";
 const ToDoList = () => {
   const [tasks, setTasks] = useState([
     "Take a shower",
